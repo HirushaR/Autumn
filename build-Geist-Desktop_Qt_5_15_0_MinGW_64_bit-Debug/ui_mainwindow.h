@@ -44,6 +44,7 @@ public:
     QAction *actionAscii;
     QAction *actionHex;
     QAction *actionStrings;
+    QAction *actionAbout;
     QAction *actionGoTo;
     QAction *actionFullScreen;
     QAction *actionAsm;
@@ -105,7 +106,6 @@ public:
     QMenu *menuSearch;
     QMenu *menuTools;
     QMenu *menuAbout;
-    QMenu *menuAbout_Geist;
     QMenu *menuView;
     QMenu *menuTemplates;
     QMenu *menuFile;
@@ -143,6 +143,8 @@ public:
         actionHex->setObjectName(QString::fromUtf8("actionHex"));
         actionStrings = new QAction(MainWindow);
         actionStrings->setObjectName(QString::fromUtf8("actionStrings"));
+        actionAbout = new QAction(MainWindow);
+        actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
         actionGoTo = new QAction(MainWindow);
         actionGoTo->setObjectName(QString::fromUtf8("actionGoTo"));
         actionFullScreen = new QAction(MainWindow);
@@ -480,8 +482,6 @@ public:
         menuTools->setObjectName(QString::fromUtf8("menuTools"));
         menuAbout = new QMenu(menuBar);
         menuAbout->setObjectName(QString::fromUtf8("menuAbout"));
-        menuAbout_Geist = new QMenu(menuAbout);
-        menuAbout_Geist->setObjectName(QString::fromUtf8("menuAbout_Geist"));
         menuView = new QMenu(menuBar);
         menuView->setObjectName(QString::fromUtf8("menuView"));
         menuTemplates = new QMenu(menuBar);
@@ -523,8 +523,7 @@ public:
         menuTools->addAction(actionAscii);
         menuTools->addAction(actionHex);
         menuTools->addAction(actionStrings);
-        menuAbout->addAction(menuAbout_Geist->menuAction());
-        menuAbout_Geist->addSeparator();
+        menuAbout->addAction(actionAbout);
         menuView->addAction(actionFullScreen);
         menuView->addAction(actionOverview);
         menuView->addAction(actionMenubar);
@@ -600,6 +599,7 @@ public:
         actionAscii->setText(QCoreApplication::translate("MainWindow", "Ascii", nullptr));
         actionHex->setText(QCoreApplication::translate("MainWindow", "Hex", nullptr));
         actionStrings->setText(QCoreApplication::translate("MainWindow", "Strings", nullptr));
+        actionAbout->setText(QCoreApplication::translate("MainWindow", "About Geist", nullptr));
         actionGoTo->setText(QCoreApplication::translate("MainWindow", "GoTo", nullptr));
 #if QT_CONFIG(shortcut)
         actionGoTo->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+L", nullptr));
@@ -691,7 +691,6 @@ public:
         menuSearch->setTitle(QCoreApplication::translate("MainWindow", "Search", nullptr));
         menuTools->setTitle(QCoreApplication::translate("MainWindow", "Tools", nullptr));
         menuAbout->setTitle(QCoreApplication::translate("MainWindow", "About", nullptr));
-        menuAbout_Geist->setTitle(QCoreApplication::translate("MainWindow", "About Geist", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
         menuTemplates->setTitle(QCoreApplication::translate("MainWindow", "Templates", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));

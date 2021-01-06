@@ -1117,10 +1117,10 @@ void MainWindow::on_actionClose_All_triggered()
 //  Display About Info
 void MainWindow::on_actionAbout_triggered()
 {
-    QString licence = "Project Page: https://github.com/Hirusha-R/Geist\n\n"
+    QString licence = "Project Page: https://github.com/HirushaR/Autumn"
             "Geist - All purpose text/code editor\n"
             "Version: 1.0\n"
-            "Copyright (C) 2017\n\n"
+            "Copyright (C) 2021\n\n"
 
             "This program is free software: you can redistribute it and/or modify "
             "it under the terms of the GNU General Public License as published by "
