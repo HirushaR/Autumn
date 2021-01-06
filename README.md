@@ -1,6 +1,6 @@
 
 
-Geist is an all purpose text/code editor written in C++ and using the Qt framework.
+Autumn is an all purpose text/code editor written in C++ and using the Qt framework.
 
 
 
@@ -14,7 +14,7 @@ Geist is an all purpose text/code editor written in C++ and using the Qt framewo
 ## Dependencies
 qt5-default qt5-qmake
 
-## Building Geist
+## Building 
 `git clone https://github.com/Hirusha/Autumn.git`  
 `mkdir build`  
 `cd build`  
