@@ -32,7 +32,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     // Style Sheet
-    this->setWindowTitle("Geist");
+    this->setWindowTitle("Autumn");
     ui->menuBar->setStyleSheet("color:white; background-color:#262626; QMenuBar::item {background:black;}");
     ui->centralWidget->layout()->setContentsMargins(0,0,0,0);
 

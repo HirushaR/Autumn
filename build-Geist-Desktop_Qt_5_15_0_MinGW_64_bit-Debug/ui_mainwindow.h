@@ -259,6 +259,13 @@ public:
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setEnabled(true);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Noto Sans"));
+        font1.setPointSize(10);
+        font1.setBold(false);
+        font1.setItalic(false);
+        font1.setWeight(50);
+        tabWidget->setFont(font1);
         tabWidget->setStyleSheet(QString::fromUtf8(""));
         tabWidget->setTabShape(QTabWidget::Rounded);
         tabWidget->setDocumentMode(true);
@@ -271,13 +278,13 @@ public:
         fileOverview->setObjectName(QString::fromUtf8("fileOverview"));
         fileOverview->setEnabled(true);
         fileOverview->setMaximumSize(QSize(110, 16777215));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("Anonymous Pro"));
-        font1.setPointSize(1);
-        font1.setBold(false);
-        font1.setItalic(false);
-        font1.setWeight(50);
-        fileOverview->setFont(font1);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Anonymous Pro"));
+        font2.setPointSize(1);
+        font2.setBold(false);
+        font2.setItalic(false);
+        font2.setWeight(50);
+        fileOverview->setFont(font2);
         fileOverview->setStyleSheet(QString::fromUtf8("font-family: \"Anonymous Pro\";\n"
 "font-size: 1pt;\n"
 "color: rgb(255, 255, 255);\n"
@@ -419,13 +426,7 @@ public:
         statusBar = new QWidget(centralWidget);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
         statusBar->setMaximumSize(QSize(16777215, 25));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("Noto Sans"));
-        font2.setPointSize(10);
-        font2.setBold(false);
-        font2.setItalic(false);
-        font2.setWeight(50);
-        statusBar->setFont(font2);
+        statusBar->setFont(font1);
         statusBar->setStyleSheet(QString::fromUtf8("background-color: #404f4f;\n"
 "color:white;"));
         horizontalLayout = new QHBoxLayout(statusBar);
@@ -435,7 +436,7 @@ public:
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         statusMsgLabel = new QLabel(statusBar);
         statusMsgLabel->setObjectName(QString::fromUtf8("statusMsgLabel"));
-        statusMsgLabel->setFont(font2);
+        statusMsgLabel->setFont(font1);
         statusMsgLabel->setStyleSheet(QString::fromUtf8("color: white;\n"
 "margin-left: 10px;"));
 
@@ -449,7 +450,7 @@ public:
         sizePolicy.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
         textBrowser->setSizePolicy(sizePolicy);
         textBrowser->setMaximumSize(QSize(100000, 20));
-        textBrowser->setFont(font2);
+        textBrowser->setFont(font1);
         textBrowser->setStyleSheet(QString::fromUtf8("color: rgb(252, 252, 252);\n"
 "background-color: rgba(255, 255, 255, 0);"));
         textBrowser->setFrameShape(QFrame::NoFrame);
@@ -461,7 +462,7 @@ public:
 
         labelFileType = new QLabel(statusBar);
         labelFileType->setObjectName(QString::fromUtf8("labelFileType"));
-        labelFileType->setFont(font2);
+        labelFileType->setFont(font1);
         labelFileType->setStyleSheet(QString::fromUtf8("padding-right: 10px;"));
 
         horizontalLayout->addWidget(labelFileType);
@@ -473,7 +474,7 @@ public:
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 961, 22));
-        menuBar->setFont(font2);
+        menuBar->setFont(font1);
         menuEdit = new QMenu(menuBar);
         menuEdit->setObjectName(QString::fromUtf8("menuEdit"));
         menuSearch = new QMenu(menuBar);
